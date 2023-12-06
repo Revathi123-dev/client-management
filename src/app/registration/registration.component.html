@@ -1,0 +1,15 @@
+<div class="container" style="text-align:center">
+
+<form (ngSubmit)="register()">
+    <div class="container">
+
+    <label>Name: <input type="text" name="name" [(ngModel)]="client.name" required></label>  <br> <br>
+    <label>Email: <input type="email" name="email" [(ngModel)]="client.email" required></label><br> <br>
+    <label>Address: <input type="text" name="address" [(ngModel)]="client.address" required></label><br> <br>
+    <label>Password: <input type="password" name="password" [(ngModel)]="client.password" required></label><br> <br>
+    <label>Repeat Password: <input type="password" name="repeatPassword" [(ngModel)]="repeatPassword" required></label><br> <br>
+    <button type="submit">register</button>
+    </div>
+</form>
+</div>
+

@@ -1,0 +1,14 @@
+<div class="container" style="text-align: center;">
+<h2>Meeting Scheduler</h2>
+
+<div *ngFor="let meeting of meetings">
+  <p>{{ meeting.topic }} - {{ meeting.numberOfPeople }} people - {{ meeting.startTime | date:'medium' }}</p>
+</div>
+
+<form (submit)="scheduleMeeting()">
+  <label>Topic: <input type="text" name="topic" [(ngModel)]="newMeeting.topic" required></label><br><br>
+  <label>Number of People: <input type="number" name="numberOfPeople" [(ngModel)]="newMeeting.numberOfPeople" required></label><br><br>
+  <label>Start Time: <input type="datetime-local" name="startTime" [(ngModel)]="newMeeting.startTime" required></label><br><br>
+  <button type="submit">Schedule Meeting</button>
+</form>
+</div>
